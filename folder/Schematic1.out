@@ -1,0 +1,152 @@
+
+**** 09/02/21 18:02:37 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Administrator\Documents\circuit\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Sep 02 18:02:13 2021
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+R_R3         Vx Vy  0.5  
+I_I1         0 Vx DC 2A  
+R_R6         0 Vx  1  
+V_V1         Vy 0 14.5V
+R_R5         0 V0  0.25  
+R_R4         V0 Vy  0.125  
+E_E3         Vx V0 V0 0 2
+
+**** RESUMING Schematic1.cir ****
+.INC "Schematic1.als"
+
+
+
+**** INCLUDING Schematic1.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R3            R3(1=Vx 2=Vy )
+I_I1            I1(+=0 -=Vx )
+R_R6            R6(1=0 2=Vx )
+V_V1            V1(+=Vy -=0 )
+R_R5            R5(1=0 2=V0 )
+R_R4            R4(1=V0 2=Vy )
+E_E3            E3(3=Vx 4=V0 1=V0 2=0 )
+_    _(Vy=Vy)
+_    _(Vx=Vx)
+_    _(V0=V0)
+.ENDALIASES
+
+
+**** RESUMING Schematic1.cir ****
+.probe
+
+
+.END
+
+**** 09/02/21 18:02:37 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Administrator\Documents\circuit\Schematic1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V0)    7.0000  (   Vx)   21.0000  (   Vy)   14.5000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.700E+01
+
+    TOTAL POWER DISSIPATION   6.82E+02  WATTS
+
+
+**** 09/02/21 18:02:37 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Administrator\Documents\circuit\Schematic1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_E3      
+V-SOURCE     1.400E+01
+I-SOURCE    -3.200E+01
+**** 09/02/21 18:02:37 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Administrator\Documents\circuit\Schematic1.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V0)    7.0000  (   Vx)   21.0000  (   Vy)   14.5000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -4.700E+01
+
+    TOTAL POWER DISSIPATION   6.82E+02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

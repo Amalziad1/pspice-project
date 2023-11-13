@@ -1,0 +1,11 @@
+* Schematics Netlist *
+
+
+
+R_R3         Vx Vy  0.5  
+I_I1         0 Vx DC 2A  
+R_R6         0 Vx  1  
+V_V1         Vy 0 14.5V
+R_R5         0 V0  0.25  
+R_R4         V0 Vy  0.125  
+E_E3         Vx V0 V0 0 2

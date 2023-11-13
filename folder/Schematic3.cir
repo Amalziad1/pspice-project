@@ -1,0 +1,23 @@
+* C:\Users\Administrator\Documents\circuit\Schematic3.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Aug 27 17:06:00 2021
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic3.net"
+.INC "Schematic3.als"
+
+
+.probe
+
+
+.END

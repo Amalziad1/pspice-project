@@ -1,0 +1,16 @@
+* Schematics Netlist *
+
+
+
+R_R2         0 $N_0001  5  
+C_C1         0 $N_0002  0.1  
+R_R1         0 $N_0003  20  
+H_H1         $N_0001 $N_0002 VH_H1 25
+VH_H1        $N_0002 $N_0003 0V
+V_V1         0 $N_0004 24V
+R_R3         $N_0005 $N_0004  3  
+X_U4         $N_0006 $N_0001 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U3         $N_0005 $N_0006 Sw_tOpen PARAMS: tOpen=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+L_L1         $N_0006 0  5.625  

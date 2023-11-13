@@ -1,0 +1,211 @@
+
+**** 09/01/21 21:18:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Administrator\Documents\circuit\Schematic4.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Sep 01 20:18:22 2021
+
+
+
+** Analysis setup **
+.tran 0ns 1000ns
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic4.net"
+
+**** INCLUDING Schematic4.net ****
+* Schematics Netlist *
+
+
+
+R_R2         0 $N_0001  5  
+C_C1         0 $N_0002  0.1  
+R_R1         0 $N_0003  20  
+H_H1         $N_0001 $N_0002 VH_H1 25
+VH_H1        $N_0002 $N_0003 0V
+V_V1         0 $N_0004 24V
+R_R3         $N_0005 $N_0004  3  
+X_U4         $N_0006 $N_0001 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U3         $N_0005 $N_0006 Sw_tOpen PARAMS: tOpen=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+L_L1         $N_0006 0  5.625  
+
+**** RESUMING Schematic4.cir ****
+.INC "Schematic4.als"
+
+
+
+**** INCLUDING Schematic4.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R2            R2(1=0 2=$N_0001 )
+C_C1            C1(1=0 2=$N_0002 )
+R_R1            R1(1=0 2=$N_0003 )
+H_H1            H1(3=$N_0001 4=$N_0002 )
+VH_H1           H1(1=$N_0002 2=$N_0003 )
+V_V1            V1(+=0 -=$N_0004 )
+R_R3            R3(1=$N_0005 2=$N_0004 )
+X_U4            U4(1=$N_0006 2=$N_0001 )
+X_U3            U3(1=$N_0005 2=$N_0006 )
+L_L1            L1(1=$N_0006 2=0 )
+.ENDALIASES
+
+
+**** RESUMING Schematic4.cir ****
+.probe
+
+
+.END
+
+WARNING -- Library file "C:\Program Files\OrCAD_Demo\Capture\Library\PSpice\eval.lib" has changed since index file nom.ind was created.
+WARNING -- The timestamp changed from Wed Feb 17 19:57:54 1999 to Wed Feb 17 20:57:54 1999.
+Making new index file nom.ind for library file nom.lib
+Index has 374 entries from 3 file(s).
+
+**** 09/01/21 21:18:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Administrator\Documents\circuit\Schematic4.sch
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U4.Smod       X_U3.Smod       
+         RON     .01             .01         
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 09/01/21 21:18:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Administrator\Documents\circuit\Schematic4.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(X_U3.3)    1.0000 (X_U4.3)    0.0000 ($N_0001)    0.0000                       
+
+($N_0002)    0.0000                   ($N_0003)    0.0000                       
+
+($N_0004)  -24.0000                   ($N_0005)    -.0797                       
+
+($N_0006)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VH_H1        0.000E+00
+    V_V1        -7.973E+00
+    X_U4.V1      0.000E+00
+    X_U3.V1     -1.000E-12
+
+    TOTAL POWER DISSIPATION   1.91E+02  WATTS
+
+
+**** 09/01/21 21:18:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Administrator\Documents\circuit\Schematic4.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** CURRENT-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         H_H1      
+V-SOURCE     0.000E+00
+I-SOURCE     0.000E+00
+
+
+**** VOLTAGE CONTROLLED SWITCHES
+
+
+NAME         X_U4.S1     X_U3.S1   
+MODEL        X_U4.Smod   X_U3.Smod 
+I LOAD       0.00E+00   -7.97E+00 
+V LOAD       0.00E+00   -7.97E-02 
+R LOAD       1.00E+06    1.00E-02 
+V CTRL       0.00E+00    1.00E+00 
+**** 09/01/21 21:18:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Administrator\Documents\circuit\Schematic4.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(X_U3.3)    1.0000 (X_U4.3)    0.0000 ($N_0001)    0.0000                       
+
+($N_0002)    0.0000                   ($N_0003)    0.0000                       
+
+($N_0004)  -24.0000                   ($N_0005)    -.0797                       
+
+($N_0006)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    VH_H1        0.000E+00
+    V_V1        -7.973E+00
+    X_U4.V1      0.000E+00
+    X_U3.V1     -1.000E-12
+
+    TOTAL POWER DISSIPATION   1.91E+02  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .08
+

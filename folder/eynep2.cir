@@ -1,0 +1,23 @@
+* C:\Users\Administrator\Documents\circuit\eynep2.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Oct 08 19:58:25 2021
+
+
+
+** Analysis setup **
+.tran 0ns 5ms 0 0.5ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "eynep2.net"
+.INC "eynep2.als"
+
+
+.probe
+
+
+.END

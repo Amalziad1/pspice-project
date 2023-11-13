@@ -1,0 +1,15 @@
+* Schematics Netlist *
+
+
+
+R_R5         0 $N_0001  1k  
+R_R1         zeynep1182820 $N_0002  100k  
+C_C1         zeynep1182820vin $N_0002  100n  
+R_R2         0 zeynep1182820  22k  
+C_C2         $N_0001 zeynep1182820vo  1u  
+R_R3         0 zeynep1182820vo  100mega  
+R_R6         zeynep1182820 $N_0003  47k  
+Q_Q1         $N_0003 zeynep1182820 $N_0001 Q2N2222
+V_V3         $N_0003 0 10V
+V_V1         zeynep1182820vin 0 DC 0 AC 0
++SIN 0 1 1k 0 0 0
